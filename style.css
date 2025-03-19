@@ -95,7 +95,7 @@ header nav div .language-selector select:focus {
   align-items: center;
   flex-direction: column;
   padding: 100px 80px;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 .about-section .about-content {
@@ -197,7 +197,7 @@ header nav div .language-selector select:focus {
 }
 @media (min-width: 768px) {
   .video-section {
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 

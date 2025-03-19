@@ -117,7 +117,7 @@ header {
     @include flex-center(space-between, center, column);
     padding: 100px 80px;
 
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 
     .about-content {
@@ -247,7 +247,7 @@ header {
     }
 
     @media (min-width: 768px) {
-        height: 100vh;
+        min-height: 100vh;
     }
 }
 
