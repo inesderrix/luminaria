@@ -414,11 +414,18 @@ footer .footer-container section h3 {
 footer .footer-container section ul {
   list-style: none;
 }
-footer .footer-container section .language-selector option {
+footer .footer-container section .language-selector select {
+  background: #673ab7;
   color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
 }
-footer .footer-container section .language-selector option:hover {
-  text-decoration: underline;
+footer .footer-container section .language-selector select:hover {
+  color: #0a0a0a;
+}
+footer .footer-container section .language-selector select:focus {
+  outline: none;
 }
 footer .copyright {
   margin: 10px;

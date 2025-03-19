@@ -504,17 +504,26 @@ footer {
             }
 
             .language-selector {
+               
 
-                option {
+                select {
+                    background: $main-color;
+                    color: $text-color;
+                    border: none;
+                    font-size: 16px;
+                    cursor: pointer;
 
-                    color: #fff;
+                    &:hover{
+                        color:$black;
+                    }
 
-                    &:hover {
-                        text-decoration: underline;
+                    &:focus {
+                        outline: none;
                     }
                 }
             }
         }
+        
 
 
     }
