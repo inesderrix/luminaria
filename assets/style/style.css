@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Remboy";
+  src: url("/assets/remboy/Remboy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +26,6 @@
 body {
   font-family: "Arial", sans-serif;
   background-color: #fff;
-  color: #fff;
 }
 
 header {
@@ -161,7 +166,7 @@ header nav div .language-selector select:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(img/bg-video.jpg);
+  background-image: url(/assets/img/bg-video.jpg);
   background-repeat: repeat;
   padding: 50px 20px;
   text-align: center;
@@ -184,7 +189,7 @@ header nav div .language-selector select:focus {
   top: -7%;
   left: -4%;
   right: -1%;
-  bottom: -4.5%;
+  bottom: -5%;
   pointer-events: none;
 }
 .video-section .video-container .video-frame .video-border img {
@@ -197,6 +202,9 @@ header nav div .language-selector select:focus {
 @media (min-width: 768px) {
   .video-section {
     min-height: 100vh;
+  }
+  .video-section h2 {
+    font-size: 3rem;
   }
 }
 
@@ -450,13 +458,6 @@ footer .copyright {
     flex-direction: row;
     gap: 100px;
   }
-}
-
-@font-face {
-  font-family: "Remboy";
-  src: url("../remboy/Remboy-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 /*# sourceMappingURL=style.css.map */

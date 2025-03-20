@@ -1,0 +1,103 @@
+@import './variable.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $text-color;
+ 
+}
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    nav {
+        @include flex-center(space-between, center, row);
+        padding: 10px 40px;
+        background-color: #0F091B;
+
+
+        img {
+            height: 40px;
+        }
+
+        div {
+            @include flex-center(space-between, center, row);
+
+            a {
+                color: $text-color;
+                margin-left: 30px;
+                text-decoration: none;
+                font-size: 16px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .reserve {
+                background-color: $main-color;
+                padding: 8px 20px;
+                border-radius: 2px;
+                font-weight: bold;
+
+            }
+
+            .tel-acceuil {
+                display: none;
+            }
+
+            .page-actuel {
+                text-decoration: underline;
+            }
+
+            .language-selector {
+                margin-left: 20px;
+
+                select {
+                    background: $black;
+                    color: $text-color;
+                    border: none;
+                    font-size: 16px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        nav div .tel-acceuil {
+            display: block;
+        }
+    }
+}

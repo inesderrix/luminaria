@@ -1,33 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 $main-color: #673ab7;
 $black: #0a0a0a;
 $text-color: #fff;
-
-.sr-only {
-    border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    -webkit-clip-path: inset(50%) !important;
-    clip-path: inset(50%) !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
-    white-space: nowrap !important;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: $text-color;
-    color: $text-color;
-}
-
 
 @mixin flex-center($justify: center, $align: center, $flexdirection: column) {
     display: flex;
@@ -36,79 +9,11 @@ body {
     flex-direction: $flexdirection;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-
-    nav {
-        @include flex-center(space-between, center, row);
-        padding: 10px 40px;
-        background-color: #0F091B;
-
-
-        img {
-            height: 40px;
-        }
-
-        div {
-            @include flex-center(space-between, center, row);
-
-            a {
-                color: $text-color;
-                margin-left: 30px;
-                text-decoration: none;
-                font-size: 16px;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            .reserve {
-                background-color: $main-color;
-                padding: 8px 20px;
-                border-radius: 2px;
-                font-weight: bold;
-
-            }
-
-            .tel-acceuil {
-                display: none;
-            }
-
-            .page-actuel {
-                text-decoration: underline;
-            }
-
-            .language-selector {
-                margin-left: 20px;
-
-                select {
-                    background: $black;
-                    color: $text-color;
-                    border: none;
-                    font-size: 16px;
-                    cursor: pointer;
-
-                    &:hover{
-                        color:$main-color;
-                    }
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-            }
-        }
-    }
-
-    @media (min-width: 768px) {
-
-        nav div .tel-acceuil {
-            display: block;
-        }
-    }
+@font-face {
+    font-family: 'Remboy';
+    src: url('/assets/remboy/Remboy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -202,7 +107,7 @@ header {
 
 .video-section {
     @include flex-center(center, center, column);
-    background-image: url(img/bg-video.jpg);
+    background-image: url(/assets/img/bg-video.jpg);
     background-repeat: repeat;
     padding: 50px 20px;
     text-align: center;
@@ -228,7 +133,7 @@ header {
                 top: -7%;
                 left: -4%;
                 right: -1%;
-                bottom: -4.5%;
+                bottom: -5%;
                 pointer-events: none;
 
                 img {
@@ -248,7 +153,7 @@ header {
     @media (min-width: 768px) {
         min-height: 100vh;
 
-        h2{
+        h2 {
             font-size: 3rem;
         }
     }
@@ -482,7 +387,7 @@ footer {
     }
 
     .footer-container {
-        
+
 
 
         img {
@@ -494,10 +399,10 @@ footer {
             margin-top: 40px;
             @include flex-center(center, start, column);
 
-            
+
 
             h3 {
-                
+
                 font-size: 1.1rem;
                 margin-bottom: 10px;
             }
@@ -507,7 +412,7 @@ footer {
             }
 
             .language-selector {
-               
+
 
                 select {
                     background: $main-color;
@@ -516,8 +421,8 @@ footer {
                     font-size: 16px;
                     cursor: pointer;
 
-                    &:hover{
-                        color:$black;
+                    &:hover {
+                        color: $black;
                     }
 
                     &:focus {
@@ -526,34 +431,35 @@ footer {
                 }
             }
         }
-        
+
 
 
     }
 
-        .copyright {
+    .copyright {
         margin: 10px;
         margin-top: 20px;
         text-align: center;
     }
 
-  @media (min-width: 768px) {
-    .footer-container {
-        @include flex-center(space-between, start, row);
-        gap: 10%;
-        margin: 10px;
-        max-width: 1024px;
+    @media (min-width: 768px) {
+        .footer-container {
+            @include flex-center(space-between, start, row);
+            gap: 10%;
+            margin: 10px;
+            max-width: 1024px;
+        }
     }
-  }
-          @media (min-width: 1024px) {
 
-            .footer{
-                @include flex-center(center, center ,row );
+    @media (min-width: 1024px) {
 
-                gap: 100px;
-            
-            }
-          }
+        .footer {
+            @include flex-center(center, center, row);
+
+            gap: 100px;
+
+        }
+    }
 }
 
 
@@ -562,9 +468,3 @@ footer {
 
 
 
-@font-face {
-    font-family: 'Remboy';
-    src: url('remboy/Remboy-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
