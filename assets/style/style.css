@@ -1,98 +1,9 @@
 @font-face {
   font-family: "Remboy";
-  src: url("/assets/remboy/Remboy-Regular.ttf") format("truetype");
+  src: url("assets/remboy/Remboy-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.sr-only {
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important;
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #fff;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-}
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding: 10px 40px;
-  background-color: #0F091B;
-}
-header nav img {
-  height: 40px;
-}
-header nav div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-header nav div a {
-  color: #fff;
-  margin-left: 30px;
-  text-decoration: none;
-  font-size: 16px;
-}
-header nav div a:hover {
-  text-decoration: underline;
-}
-header nav div .reserve {
-  background-color: #673ab7;
-  padding: 8px 20px;
-  border-radius: 2px;
-  font-weight: bold;
-}
-header nav div .tel-acceuil {
-  display: none;
-}
-header nav div .page-actuel {
-  text-decoration: underline;
-}
-header nav div .language-selector {
-  margin-left: 20px;
-}
-header nav div .language-selector select {
-  background: #0a0a0a;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-header nav div .language-selector select:hover {
-  color: #673ab7;
-}
-header nav div .language-selector select:focus {
-  outline: none;
-}
-@media (min-width: 768px) {
-  header nav div .tel-acceuil {
-    display: block;
-  }
-}
-
 .about-section {
   display: flex;
   justify-content: space-between;
@@ -166,7 +77,7 @@ header nav div .language-selector select:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(/assets/img/bg-video.jpg);
+  background-image: url(assets/img/bg-video.jpg);
   background-repeat: repeat;
   padding: 50px 20px;
   text-align: center;
@@ -457,6 +368,95 @@ footer .copyright {
     align-items: center;
     flex-direction: row;
     gap: 100px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 40px;
+  background-color: #0F091B;
+}
+header nav img {
+  height: 40px;
+}
+header nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+header nav div a {
+  color: #fff;
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 16px;
+}
+header nav div a:hover {
+  text-decoration: underline;
+}
+header nav div .reserve {
+  background-color: #673ab7;
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+header nav div .tel-acceuil {
+  display: none;
+}
+header nav div .page-actuel {
+  text-decoration: underline;
+}
+header nav div .language-selector {
+  margin-left: 20px;
+}
+header nav div .language-selector select {
+  background: #0a0a0a;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+header nav div .language-selector select:hover {
+  color: #673ab7;
+}
+header nav div .language-selector select:focus {
+  outline: none;
+}
+@media (min-width: 768px) {
+  header nav div .tel-acceuil {
+    display: block;
   }
 }
 

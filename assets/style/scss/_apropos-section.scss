@@ -1,20 +1,5 @@
-$main-color: #673ab7;
-$black: #0a0a0a;
-$text-color: #fff;
-
-@mixin flex-center($justify: center, $align: center, $flexdirection: column) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $flexdirection;
-}
-
-@font-face {
-    font-family: 'Remboy';
-    src: url('/assets/remboy/Remboy-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@use 'fonts.scss';
+@use 'variable.scss' as *;
 
 
 .about-section {
@@ -107,7 +92,7 @@ $text-color: #fff;
 
 .video-section {
     @include flex-center(center, center, column);
-    background-image: url(/assets/img/bg-video.jpg);
+    background-image: url(assets/img/bg-video.jpg);
     background-repeat: repeat;
     padding: 50px 20px;
     text-align: center;
