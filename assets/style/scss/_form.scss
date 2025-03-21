@@ -1,0 +1,54 @@
+@use 'variable.scss' as *;
+
+form {
+    padding: 20px;
+    
+    max-width: 500px;
+    @include flex-center (center, center, column);
+
+    .date{
+        @include flex-center (center, center, column);
+
+        
+        .section {
+            @include flex-center (center, center, column);
+        }
+        
+    }
+        
+        label {
+            font-weight: bold;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            
+        }
+
+        .suivant{
+            margin-top: 16px;
+            background-color: $main-color;
+            padding: 8px 20px;
+            border-radius: 2px;
+            font-weight: bold;
+            color: $text-color;
+            border: none;
+        }
+        
+        @media (min-width: 768px) {
+            .date {
+                    @include flex-center (center, center, row);
+                    gap: 48px;
+
+                    .section {
+                            @include flex-center (start, start, column);
+                        }
+        
+                }
+            
+        }
+
+
+    .inscription{
+        @include flex-center(center, start, column);
+        width: 400px;
+    }
+}

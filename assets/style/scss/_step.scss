@@ -1,0 +1,47 @@
+@use 'variable.scss' as *;
+
+.step {
+    
+    display: none;
+}
+
+.active {
+    display: block;
+    @include flex-center(center,center,column);
+    
+}
+
+#summary {
+    display: block;
+}
+
+#breadcrumb {
+    margin-bottom: 20px;
+    font-size: 1rem;
+
+    .current {
+        font-weight: bold;
+        color:$main-color;
+    }
+}
+    
+body{
+    @include flex-center(start, center, column);
+    background-color: #F5EEE0;
+}
+
+main{
+    margin-top: 100px;
+
+    
+    @include flex-center(start,center,column);
+    min-height: 100vh;
+    color: $black;
+    
+    img{
+        margin-top: 32px;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
