@@ -8,11 +8,7 @@ function changeLanguage() {
 
             if (nompage.includes('apropos')) {
                 window.location.href = language === 'fr' ? 'aproposfr.html' : 'aproposen.html';
-            } else if (nompage.includes('index')) {
-                window.location.href = language === 'fr' ? 'indexfr.html' : 'indexen.html';
-            } else if (nompage.includes('reservation')) {
-                window.location.href = language === 'fr' ? 'reservationfr.html' : 'reservationen.html';
-            }
+            } 
         });
     });
 }

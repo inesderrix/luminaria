@@ -1,23 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+    const monthNames = {
+        fr: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+        en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    };
+
     const daysGrid = document.querySelector('.days-grid');
     const currentMonth = document.getElementById('currentMonth');
     const prevMonthBtn = document.getElementById('prevMonth');
     const nextMonthBtn = document.getElementById('nextMonth');
     const selectedDateInput = document.getElementById('selectedDate');
 
+   
+    function getLangFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('lang') === 'en' ? 'en' : 'fr'; 
+    }
+
+    const userLang = getLangFromURL();
+
     let date = new Date();
     let currentYear = date.getFullYear();
     let currentMonthIndex = date.getMonth();
 
     function renderCalendar() {
-        daysGrid.innerHTML = "";
+        document.querySelectorAll('.day:not(.day-name)').forEach(day => day.remove());
+
+        currentMonth.textContent = `${monthNames[userLang][currentMonthIndex]} ${currentYear}`;
+
         const firstDay = new Date(currentYear, currentMonthIndex, 1).getDay();
         const daysInMonth = new Date(currentYear, currentMonthIndex + 1, 0).getDate();
-        currentMonth.textContent = `${monthNames[currentMonthIndex]} ${currentYear}`;
 
+        const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
 
-        for (let i = 0; i < (firstDay === 0 ? 6 : firstDay - 1); i++) {
+        for (let i = 0; i < adjustedFirstDay; i++) {
             daysGrid.innerHTML += '<div class="day empty"></div>';
         }
 
