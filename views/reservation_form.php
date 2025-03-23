@@ -60,7 +60,7 @@ $t = $texts[$lang] ?? $texts['fr'];
           <img src="./assets/img/reserv.svg" alt="">
         <div class="date">
             <div class="section">            
-                <label><?php echo $t['date']; ?></label><br>
+                <label class="label"><?php echo $t['date']; ?></label><br>
                 <div class="calendar-container">
                     <div class="month-picker">
                         <button type="button" id="prevMonth">&lt;</button>
@@ -86,7 +86,7 @@ $t = $texts[$lang] ?? $texts['fr'];
             <div>
 
                 <div class="section">
-                    <label><?php echo $t['heure']; ?></label><br>
+                    <label class="label"><?php echo $t['heure']; ?></label><br>
                     <div class="horaire">
                         
                         <?php for ($h = 10; $h <= 18; $h++) { ?>
@@ -102,7 +102,7 @@ $t = $texts[$lang] ?? $texts['fr'];
                     
                     <div class="visiteur">
                         
-                        <label><?php echo $t['visiteurs']; ?></label><br>
+                        <label class="label"><?php echo $t['visiteurs']; ?></label><br>
                         <div class="counter">
                             <button type="button" class="btn1" onclick="changeValue(-1)">−</button>
                             <input type="number" name="places" id="visitorCount" min="1" max="10" value="1" oninput="updateRecap()" required>
@@ -117,7 +117,7 @@ $t = $texts[$lang] ?? $texts['fr'];
         </div>
             
             <!-- Étape 2  -->
-    <div class="step " id="step2">
+    <div class="step  " id="step2">
         <h1><?php echo $t['identifie']; ?></h1>
           <img src="./assets/img/reserv.svg" alt="">
 
@@ -139,7 +139,8 @@ $t = $texts[$lang] ?? $texts['fr'];
     <div class="step" id="step3">
         <h1><?php echo $t['titrerecap']; ?></h1>
           <img src="./assets/img/reserv.svg" alt="">
-        <div id="summary">
+        <div id="summary" class="recap">
+            <h2>Vos informations</h2>
             <p><strong><?php echo $t['nom']; ?></strong> <span id="recap_family_name"></span> <span id="recap_name"></span></p>
             <p><strong><?php echo $t['mail']; ?></strong> <span id="recap_email"></span></p>
             <p><strong><?php echo $t['daterecap']; ?></strong> <span id="recap_date"></span></p>
@@ -151,15 +152,16 @@ $t = $texts[$lang] ?? $texts['fr'];
     </div>
     
     <!-- Étape 4 -->
-    <div class="step" id="step4">
-        <img src="" alt="">
+    <div class="step conf" id="step4">
+        <img src="assets/img/conf-cadre.svg" alt="">
         <div>
-            <img src="" alt="">
+            <img src="assets/img/conf-titre.svg" alt="">
             <h1><?php echo $t['reservconf']; ?></h1>
-            <img src="" alt="">
+            <img src="assets/img/conf-titre.svg" class="retourner" alt="">
             <p><?php echo $t['textconf']; ?></p>
-            <a href="./aproposen.html"><?php echo $t['retourac']; ?></a>
+            <a href="<?php echo $aproposPage; ?>" class="retour"><?php echo $t['retourac']; ?></a>
         </div>
+        <img src="assets/img/conf-cadre.svg" class="retourner" alt="">
 
         
     </div>
@@ -169,6 +171,7 @@ $t = $texts[$lang] ?? $texts['fr'];
 </main>
 <script src="controllers/script.js"></script>
 <script src="assets/js/calendar.js"></script>
+
 
 <script>
 

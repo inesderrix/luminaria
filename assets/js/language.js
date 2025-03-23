@@ -1,3 +1,12 @@
+function updateLinkLanguage() {
+    const languageSelect = document.querySelectorAll('.language-selector select');
+    const reserveLink = document.querySelector('.reserve');
+    const language = languageSelect[0].value; 
+    if (reserveLink) {
+        reserveLink.href = `index.php?lang=${language}`;
+    }
+}
+
 function changeLanguage() {
     const languageSelect = document.querySelectorAll('.language-selector select');
 
@@ -8,7 +17,8 @@ function changeLanguage() {
 
             if (nompage.includes('apropos')) {
                 window.location.href = language === 'fr' ? 'aproposfr.html' : 'aproposen.html';
-            } 
+            }
+            updateLinkLanguage();
         });
     });
 }
@@ -23,6 +33,8 @@ function LanguageSelector() {
     languageSelect.forEach(select => {
         select.value = language;
     });
+
+    updateLinkLanguage();
 }
 
 

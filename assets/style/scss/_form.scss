@@ -15,9 +15,13 @@ form {
         }
         
     }
-        
-        label {
+
+        label{
             font-weight: bold;
+        }
+        
+        .label {
+           
             margin-top: 32px;
             margin-bottom: 16px;
             
@@ -31,6 +35,9 @@ form {
             font-weight: bold;
             color: $text-color;
             border: none;
+            &:hover {
+                    text-decoration: underline;
+                }
         }
         
         @media (min-width: 768px) {
@@ -48,7 +55,17 @@ form {
 
 
     .inscription{
-        @include flex-center(center, start, column);
+        @include flex-center(center, center, column);
         width: 400px;
+        margin-top: 32px;
+
+        label{
+            width: 100%;
+            margin: 16px 8px;
+        }
+                .suivant {
+        
+                    margin-top: 16px;
+                }
     }
 }

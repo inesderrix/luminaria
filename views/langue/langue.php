@@ -28,9 +28,9 @@ return[
         'titrerecap'=>'Récapitulatif de votre commande',
         'daterecap'=>'Date :',
         'heurerecap'=>'Heure :',
-        'comfirmer'=>'Confirmer',
+        'confirmer'=>'Confirmer',
         'reservconf'=>'RÉSERVATION CONFIRMÉE',
-        'textconf'=>'un mail vous a ...',
+        'textconf'=>"Un email contenant votre billet et les détails de votre visite a été envoyé à l'adresse indiquée. Vérifiez votre boîte de réception et vos courriers indésirables.",
         'retourac'=>"Retourner à l'accueil"
     ],
     'en'=>[
@@ -62,7 +62,7 @@ return[
         'heurerecap'=>'Heure :',
         'confirmer'=>'Confirmer',
         'reservconf'=>'RÉSERVATION CONFIRMÉE',
-        'textconf'=>'un mail vous a ...',
+        'textconf'=>"Un email contenant votre billet et les détails de votre visite a été envoyé à l'adresse indiquée. Vérifiez votre boîte de réception et vos courriers indésirables.",
         'retourac'=>"Retourner à l'accueil"
         ]
 ];

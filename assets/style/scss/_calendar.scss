@@ -146,19 +146,85 @@
         }
     }
 
-         @media (min-width: 768px) {
-            @include flex-center(start, start, column);
-            margin-top: 16px;
-            gap: 12px;
-           
-    
-         }
+    @media (min-width: 768px) {
+        @include flex-center(start, start, column);
+        margin-top: 16px;
+        gap: 12px;
+
+
+    }
 }
 
 input[type="text"],
-input[ type="email"]{
+input[ type="email"] {
     width: 100%;
     padding: 8px;
     border: 1px solid #000;
     background: none;
+}
+
+
+
+.recap {
+    border: 1px solid black;
+    padding: 16px;
+    width: 100%;
+    margin-top: 32px;
+
+    h2 {
+        margin-bottom: 16px;
+        border-bottom: 1px solid black;
+        padding-left: 8px;
+    }
+
+    p {
+        padding-left: 8px;
+        margin-top: 8px;
+
+    }
+}
+
+.conf {
+    @include flex-center(center, center, column);
+    padding: 32px;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        margin: 0;
+
+    }
+
+
+    .retourner {
+        transform: scaleY(-1);
+    }
+
+    div {
+        padding: 32px 16px;
+
+        img {
+            max-width: 50%;
+        }
+
+        p {
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+
+        .retour {
+            text-decoration: none;
+            background-color: $main-color;
+            padding: 8px 20px;
+            border-radius: 2px;
+            font-weight: bold;
+            color: $text-color;
+            border: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
 }
