@@ -92,7 +92,7 @@
 
 .video-section {
     @include flex-center(center, center, column);
-    background-image: url(assets/img/bg-video.jpg);
+    background-image: url(bg-video.jpg);
     background-repeat: repeat;
     padding: 50px 20px;
     text-align: center;
