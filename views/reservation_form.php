@@ -13,13 +13,13 @@ $t = $texts[$lang] ?? $texts['fr'];
 ?>
 <header>
     <nav>
-        <a href="#">
+        <a href="index.html">
             <img src="assets/img/logo/logo-b.svg" alt=" retour">
         </a>
 
 
         <div>
-            <a href="#" class="tel-acceuil">
+            <a href="index.html" class="tel-acceuil">
                 <?php echo $t['navacceuil']; ?>
             </a>
             <a href="<?php echo $aproposPage; ?>" class="page-actuel">
