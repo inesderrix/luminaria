@@ -3,7 +3,7 @@ function updateLinkLanguage() {
     const reserveLink = document.querySelector('.reserve');
     const language = languageSelect[0].value; 
     if (reserveLink) {
-        reserveLink.href = `index.php?lang=${language}`;
+        reserveLink.href = `reserv.php?lang=${language}`;
     }
 }
 

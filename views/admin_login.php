@@ -14,6 +14,6 @@
         <input type="submit" name="admin_login" value="Se connecter">
     </form>
     <?php if(isset($error)) { echo "<p style='color:red;'>{$error}</p>"; } ?>
-    <p><a href="index.php">Retour au site</a></p>
+    <p><a href="reserv.php">Retour au site</a></p>
 </body>
 </html>
