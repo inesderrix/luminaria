@@ -256,6 +256,7 @@
 .info .contenu .cadre-orne .cadre .contenu-cadre h2 {
   font-size: 1.55rem;
   margin-bottom: 45px;
+  min-width: 416px;
 }
 .info .contenu .cadre-orne .cadre .contenu-cadre .text {
   text-align: left;
